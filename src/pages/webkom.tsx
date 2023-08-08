@@ -13,7 +13,8 @@ const WebkomPage = () => {
             <Flex direction='column' background={formBackground} p='12' rounded='6' position='relative' minW='300' maxW='350'>
                 <Heading size='md' mb='4'>Webkom💻</Heading>
 
-                <Text></Text>
+                <Text mb='5'>Webkom is a subgroup under the line union (echo) under the Informatics Department at UIB.</Text>
+                <Text>This subgroup keeps the website <i>echo.uib.no</i> up and running.</Text>
 
                 <SimpleGrid columns={1} spacingX='20px' spacingY='6px' m={4}>
                     <LinkBox transition=".1s ease-out" _hover={{ transform: 'scale(1.1)' }}>
