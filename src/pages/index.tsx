@@ -11,13 +11,13 @@ const IndexPage = () => {
   const [ toggle, setToggle ] =  useState(false);
 
   return (
-    <Flex height='100vh' alignItems='center' justifyContent='center'>
+    <Flex height='100vh' alignItems='center' justifyContent='center' background={"#272727"}>
       <Flex direction='column' background={formBackground} p='12' rounded='6' position='relative' minW='300' maxW='350'>
-        <Heading size='md' mb='4'>✨Thea Jenny Kolnes✨</Heading>
+        <Heading size='md' mb='4'>✨HI THERE✨</Heading>
 
         <Flex>
           <Text m='6'>
-            Hi there! I'm Thea Jenny. Grew up right outside of Stavanger, but currently studying Computer Technology in Bergen at UIB.
+            My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.
           </Text>
         </Flex>
 
