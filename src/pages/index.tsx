@@ -5,6 +5,7 @@ import { HiOutlineArrowSmRight } from 'react-icons/hi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
+
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue('#D3CDF9', '#6B60B1');
