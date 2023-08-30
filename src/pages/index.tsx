@@ -2,8 +2,8 @@ import { Box, IconButton, Icon, Flex, Spacer, Heading, useColorMode, useColorMod
 import { useState } from "react"
 import { IoSunny, IoMoon } from 'react-icons/io5';
 import { HiOutlineArrowSmRight } from 'react-icons/hi'
-import { FaLinkedin, FaGithub } from 'react-icons/Fa'
-import { MdEmail } from 'react-icons/Md'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
