@@ -1,1 +1,1 @@
-My own website for cvs! WIP
+Liten nettside om meg :)
