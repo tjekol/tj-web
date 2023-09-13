@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, LinkBox, LinkOverlay, useColorMode, useColorModeValue, Text, SimpleGrid, IconButton, Spacer } from "@chakra-ui/react";
 import { useState } from "react";
-import { HiOutlineArrowSmLeft } from "react-icons/hi";
+import { HiOutlineArrowSmLeft, HiOutlineHome } from "react-icons/hi";
 import { IoSunny, IoMoon } from "react-icons/io5";
 
 const WebkomPage = () => {
@@ -17,11 +17,11 @@ const WebkomPage = () => {
                 <Text mb='5'>Webkom is a subgroup under the student organization (echo) under the Informatics Department at UIB.</Text>
                 <Text>This subgroup keeps their websites up and running.</Text>
 
-                <SimpleGrid columns={1} spacingX='20px' spacingY='6px' m={4}>
-                    <LinkBox transition=".1s ease-out" _hover={{ transform: 'scale(1.1)' }}>
-                        <LinkOverlay href="https://echo.uib.no">
-                            <Box rounded={5} bg={textColor}>
-                            <Text align='center' fontStyle='italic' p='6px' color={formBackground}>https://echo.uib.no</Text>
+                <SimpleGrid columns={1} spacingX='20px' spacingY='6px' m={4} _hover={{textDecoration: 'underline', color: formBackground}}>
+                    <LinkBox>
+                        <LinkOverlay href="https://echo.uib.no" >
+                            <Box rounded={5} bg={textColor} >
+                            <Text align='center' fontStyle='italic' p='6px' color={formBackground}  >https://echo.uib.no</Text>
                             </Box>
                         </LinkOverlay>
                     </LinkBox>
@@ -37,12 +37,19 @@ const WebkomPage = () => {
 
                 </Box>
 
-                <Flex justifyContent='center'>
+                <Flex>
                     <LinkBox>
                         <LinkOverlay href='/about'>
                         <IconButton width='15' aria-label="next page" icon={<HiOutlineArrowSmLeft/>}  />
                         </LinkOverlay>
                     </LinkBox>
+                    <Spacer/>
+                    <LinkBox mr='10'>
+                        <LinkOverlay href='/'>
+                        <IconButton width='15' aria-label="next page" icon={<HiOutlineHome />}  />
+                        </LinkOverlay>
+                    </LinkBox>
+                    <Spacer/>
                 </Flex>
             </Flex>
         </Flex>

@@ -58,8 +58,7 @@ const IndexPage = () => {
           <Spacer/>
         </Flex>
         
-        <Flex>
-          <Spacer/>
+        <Flex justifyContent='right'>
           <LinkBox>
             <LinkOverlay href='/about'>
               <IconButton width='15' aria-label="next page" icon={<HiOutlineArrowSmRight />}  />
