@@ -9,15 +9,16 @@ import { MdEmail } from 'react-icons/md'
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue('#D3CDF9', '#6B60B1');
+  const textColor = useColorModeValue('#404067', '#D3CDF9');
   const [ toggle, setToggle ] =  useState(false);
 
   return (
     <Flex height='100vh' alignItems='center' justifyContent='center' background={"#272727"}>
       <Flex direction='column' background={formBackground} p='12' rounded='6' position='relative' minW='300' maxW='350'>
-        <Heading size='md' mb='4'>✨HI THERE✨</Heading>
+        <Heading size='md' mb='2' textAlign='center' color={textColor}>✨HI THERE✨</Heading>
 
         <Flex>
-          <Text m='6'>
+          <Text m='6' textAlign='center' color={textColor}>
             My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.
           </Text>
         </Flex>
@@ -30,7 +31,7 @@ const IndexPage = () => {
                   aria-label="Linkedin-en min"
                   isExternal
               >
-                  <Icon as={FaLinkedin} boxSize='7' />
+                  <Icon as={FaLinkedin} boxSize='7' color={textColor} />
               </LinkOverlay>
           </LinkBox>
 
@@ -40,7 +41,7 @@ const IndexPage = () => {
                     aria-label="Githubben min"
                     isExternal
                 >
-                    <Icon as={FaGithub} boxSize='7' />
+                    <Icon as={FaGithub} boxSize='7' color={textColor} />
                 </LinkOverlay>
             </LinkBox>
             
@@ -50,7 +51,7 @@ const IndexPage = () => {
                   aria-label="Send mail til meg"
                   isExternal
               >
-                  <Icon as={MdEmail} boxSize='7' />
+                  <Icon as={MdEmail} boxSize='7' color={textColor}/>
               </LinkOverlay>
           </LinkBox>
           
