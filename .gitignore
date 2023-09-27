@@ -15,6 +15,10 @@
 # production
 /build
 
+# Ignore prettier artifacts:
+build
+coverage
+
 # misc
 .DS_Store
 *.pem
