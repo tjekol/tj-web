@@ -1,6 +1,7 @@
 import { Flex, Heading, Text, Box, useColorMode, useColorModeValue, IconButton, LinkBox, LinkOverlay, Spacer } from "@chakra-ui/react";
+import { SP } from "next/dist/shared/lib/utils";
 import { useState } from "react";
-import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight, HiOutlineHome } from "react-icons/hi";
 import { IoSunny, IoMoon } from "react-icons/io5";
 import { formBackgroundLight, formBackgroundDark, textColorLight, textColorDark } from "./theme";
 
@@ -10,12 +11,14 @@ const PageComponent = ({
     children,
     prevPage,
     nextPage,
+    homeButton,
 } : { 
     header : string, 
     desc? : string, 
     children : React.ReactNode 
     prevPage?: string,
     nextPage?: string,
+    homeButton?: boolean,
 }) => {
     const { toggleColorMode } = useColorMode();
     const formBackground = useColorModeValue(formBackgroundLight, formBackgroundDark);
@@ -34,23 +37,35 @@ const PageComponent = ({
                 </Flex>
             )}
             {children}
+            {(prevPage || nextPage) && (
             <Flex>
-            {prevPage && (
-                <LinkBox>
-                    <LinkOverlay href={prevPage}>
-                        <IconButton width='15' aria-label="previous page" icon={<HiOutlineArrowSmLeft />}  />
-                    </LinkOverlay>
-                </LinkBox>
-            )}
-            <Spacer/>
-            {nextPage && (
-                <LinkBox>
-                    <LinkOverlay href={nextPage}>
-                        <IconButton width='15' aria-label="next page" icon={<HiOutlineArrowSmRight />}  />
-                    </LinkOverlay>
-                </LinkBox>
-            )}
+                {prevPage && (
+                    <LinkBox>
+                        <LinkOverlay href={prevPage}>
+                            <IconButton width='15' aria-label="previous page" icon={<HiOutlineArrowSmLeft />}  />
+                        </LinkOverlay>
+                    </LinkBox>
+                )}
+                {homeButton && (
+                    <>
+                        <Spacer />
+                        <LinkBox mr='10'>
+                        <LinkOverlay href='/'>
+                            <IconButton width='15' aria-label="next page" icon={<HiOutlineHome />} />
+                        </LinkOverlay>
+                        </LinkBox>
+                    </>
+                )}
+                <Spacer/>
+                {nextPage && (
+                    <LinkBox>
+                        <LinkOverlay href={nextPage}>
+                            <IconButton width='15' aria-label="next page" icon={<HiOutlineArrowSmRight />}  />
+                        </LinkOverlay>
+                    </LinkBox>
+                )}
             </Flex>
+            )}
             <Box position='absolute' top='4' right='4' cursor='pointer'onClick={() => {
             toggleColorMode();
             setToggle(!toggle);

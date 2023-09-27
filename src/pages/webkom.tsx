@@ -9,6 +9,7 @@ const WebkomPage = () => {
         <PageComponent
         header="Webkom💻"
         prevPage="/about"
+        homeButton={true}
         >
             <Text mb='5'>Webkom is a subgroup under the student organization (echo) under the Informatics Department at UIB.</Text>
             <Text>This subgroup keeps their websites up and running.</Text>
