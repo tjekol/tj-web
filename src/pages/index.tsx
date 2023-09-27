@@ -4,6 +4,7 @@ import { IoSunny, IoMoon } from 'react-icons/io5';
 import { HiOutlineArrowSmRight } from 'react-icons/hi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+import PageComponent from "@/components/page";
 
 
 const IndexPage = () => {
@@ -13,17 +14,11 @@ const IndexPage = () => {
   const [ toggle, setToggle ] =  useState(false);
 
   return (
-    <Flex height='100vh' alignItems='center' justifyContent='center' background={"#272727"}>
-      <Flex direction='column' background={formBackground} p='12' rounded='6' position='relative' minW='300' maxW='350'>
-        <Heading size='md' mb='2' textAlign='center' color={textColor}>✨HI THERE✨</Heading>
-
-        <Flex>
-          <Text m='6' textAlign='center' color={textColor}>
-            My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.
-          </Text>
-        </Flex>
-
-        <Flex m='2' direction='row'>
+    <PageComponent 
+      header={"✨HI THERE✨"} 
+      desc={"My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB."} 
+    >
+      <Flex m='2' direction='row'>
           <Spacer/>
           <LinkBox transition=".1s ease-out" _hover={{ transform: 'scale(1.30)' }} >
               <LinkOverlay
@@ -65,17 +60,7 @@ const IndexPage = () => {
             </LinkOverlay>
           </LinkBox>
         </Flex>
-       
-        <Box position='absolute' top='4' right='4' cursor='pointer'onClick={() => {
-          toggleColorMode();
-          setToggle(!toggle);
-        }}
-        >
-          {toggle ? <IoSunny /> : <IoMoon /> }
-
-        </Box>
-      </Flex>
-    </Flex>
+    </PageComponent>
   )
 }
 
