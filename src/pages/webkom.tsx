@@ -14,9 +14,9 @@ const WebkomPage = () => {
             <Text>This subgroup keeps their websites up and running.</Text>
             <SimpleGrid columns={1} spacingY='6px' m={4} _hover={{textDecoration: 'underline', color: formBackground}}>
                 <LinkBox>
-                    <LinkOverlay href="https:echo.uib.no" >
+                    <LinkOverlay href="https://echo.uib.no" >
                         <Box rounded={5} bg={textColor} >
-                        <Text align='center' fontStyle='italic' p='6px' color={formBackground}  >https:echo.uib.no</Text>
+                        <Text align='center' fontStyle='italic' p='6px' color={formBackground}>https://echo.uib.no</Text>
                         </Box>
                     </LinkOverlay>
                 </LinkBox>
