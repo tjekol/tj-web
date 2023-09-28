@@ -1,9 +1,10 @@
 name: ESLint
 
-on: [push]
+on:
+  [push]
   # [push]:
-    # branches:
-    #   - master  # Adjust the branch name as needed
+  # branches:
+  #   - master  # Adjust the branch name as needed
 
 jobs:
   eslint:
