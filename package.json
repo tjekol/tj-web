@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prepare": "husky install",
     "prettier": "prettier --write ."
   },
   "dependencies": {
@@ -35,14 +36,14 @@
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,scss,json,md}": [
-      "npm run prettier --"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,json,md}": [
+      "npm run prettier --"
+    ]
   }
 }
