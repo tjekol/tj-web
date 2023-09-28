@@ -17,7 +17,7 @@ const IndexPage = () => {
 
   return (
     <PageComponent
-      header={'✨HI THERE✨'}
+      header={"✨HI THERE✨"}
       desc={
         'My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.'
       }
