@@ -1,12 +1,25 @@
-name: eslint
+name: ESLint
 
-on: [push]
+on:
+  push:
+    branches:
+      - master  # Adjust the branch name as needed
 
 jobs:
   eslint:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: stefanoeb/eslint-action@1.0.2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          files: src/
+          node-version: 20.7.1  # Adjust the Node.js version as needed
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Run ESLint
+        run: yarn eslint src --fix --color --max-warnings=0
