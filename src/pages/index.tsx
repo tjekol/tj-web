@@ -45,7 +45,7 @@ const IndexPage = () => {
         >
           <LinkOverlay
             href="https://github.com/tkol02"
-            aria-label="Githubben min :)!"
+            aria-label="Githubben min"
             isExternal
           >
             <Icon as={FaGithub} boxSize="7" color={textColor} />
