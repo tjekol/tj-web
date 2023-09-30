@@ -3,29 +3,25 @@ import {
   Flex,
   Heading,
   Text,
-  Box,
-  useColorMode,
   useColorModeValue,
   IconButton,
   LinkBox,
   LinkOverlay,
   Spacer,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 import {
   HiOutlineArrowSmLeft,
   HiOutlineArrowSmRight,
   HiOutlineHome,
 } from 'react-icons/hi';
-import { IoSunny, IoMoon } from 'react-icons/io5';
-import {
+import DarkModeSwitch, {
   formBackgroundLight,
   formBackgroundDark,
   textColorLight,
   textColorDark,
-} from './theme';
+} from './color-themes';
 
-const PageComponent = ({
+function PageComponent({
   header,
   desc,
   children,
@@ -39,14 +35,12 @@ const PageComponent = ({
   prevPage?: string;
   nextPage?: string;
   homeButton?: boolean;
-}) => {
-  const { toggleColorMode } = useColorMode();
+}) {
   const formBackground = useColorModeValue(
     formBackgroundLight,
     formBackgroundDark,
   );
   const textColor = useColorModeValue(textColorLight, textColorDark);
-  const [toggle, setToggle] = useState(false);
 
   return (
     <>
@@ -117,18 +111,7 @@ const PageComponent = ({
               )}
             </Flex>
           )}
-          <Box
-            position="absolute"
-            top="4"
-            right="4"
-            cursor="pointer"
-            onClick={() => {
-              toggleColorMode();
-              setToggle(!toggle);
-            }}
-          >
-            {toggle ? <IoSunny /> : <IoMoon />}
-          </Box>
+          <DarkModeSwitch />
         </Flex>
       </Flex>
       <LinkBox>
@@ -146,6 +129,6 @@ const PageComponent = ({
       </LinkBox>
     </>
   );
-};
+}
 
 export default PageComponent;

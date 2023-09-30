@@ -13,7 +13,7 @@ import {
   formBackgroundDark,
   textColorLight,
   textColorDark,
-} from '@/components/theme';
+} from '@/components/color-themes';
 
 const AboutPage = () => {
   const formBackground = useColorModeValue(
