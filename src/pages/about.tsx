@@ -1,4 +1,10 @@
 import {
+  formBackgroundLight,
+  formBackgroundDark,
+  textColorLight,
+  textColorDark,
+} from '@/components/color-themes';
+import {
   Box,
   SimpleGrid,
   Flex,
@@ -8,12 +14,6 @@ import {
   Text,
 } from '@chakra-ui/react';
 import PageComponent from '@/components/page';
-import {
-  formBackgroundLight,
-  formBackgroundDark,
-  textColorLight,
-  textColorDark,
-} from '@/components/color-themes';
 
 const AboutPage = () => {
   const formBackground = useColorModeValue(
@@ -28,27 +28,27 @@ const AboutPage = () => {
       prevPage={'/'}
     >
       <Flex>
-        <Text mt="4" textAlign="center" color={textColor}>
+        <Text mt='4' textAlign='center' color={textColor}>
           <b>Projects</b>
         </Text>
       </Flex>
-      <SimpleGrid columns={1} spacingX="20px" spacingY="6px" m={4}>
-        <LinkBox transition=".1s ease-out" _hover={{ transform: 'scale(1.1)' }}>
-          <LinkOverlay href="/webkom">
+      <SimpleGrid columns={1} spacingX='20px' spacingY='6px' m={4}>
+        <LinkBox transition='.1s ease-out' _hover={{ transform: 'scale(1.1)' }}>
+          <LinkOverlay href='/webkom'>
             <Box rounded={5} bg={textColor}>
-              <Text align="center" p="6px" color={formBackground}>
+              <Text align='center' p='6px' color={formBackground}>
                 Webkom💻
               </Text>
             </Box>
           </LinkOverlay>
         </LinkBox>
-        <LinkBox transition=".1s ease-out" _hover={{ transform: 'scale(1.1)' }}>
-          <LinkOverlay href="/test">
+        <LinkBox transition='.1s ease-out' _hover={{ transform: 'scale(1.1)' }}>
+          <LinkOverlay href='/test'>
             <Box rounded={5} bg={textColor}>
               <Text
-                align="center"
-                fontStyle="italic"
-                p="6px"
+                align='center'
+                fontStyle='italic'
+                p='6px'
                 color={formBackground}
               >
                 Tester
