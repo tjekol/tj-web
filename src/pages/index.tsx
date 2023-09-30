@@ -7,15 +7,15 @@ import {
   LinkBox,
 } from '@chakra-ui/react';
 import LanguageSwitcher from '@/components/language-switcher';
-import { useLanguage } from '@/components/language-context';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import useLanguage from '@/hooks/use-language';
 import PageComponent from '@/components/page';
 import { MdEmail } from 'react-icons/md';
 import React from 'react';
 
 const IndexPage = () => {
   const textColor = useColorModeValue('#404067', '#D3CDF9');
-  const isNorwegian = useLanguage().language === 'no';
+  const isNorwegian = useLanguage();
 
   return (
     <PageComponent
