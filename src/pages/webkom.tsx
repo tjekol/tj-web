@@ -24,11 +24,12 @@ function WebkomPage() {
           ? 'Webkom er en undergruppe under linjeforeningen echo, som er linjeforeningen til Institutt for Informatikk på UIB.'
           : 'Webkom is a subgroup under the student organization echo, which is the student organization to the Informatics Department at UIB.'}
       </Text>
+      {/* prettier-ignore */}
       <Text mt='2' m='2'>
         {isNorwegian
           ? 'Denne undergruppa drifter nettsidene til echo.'
           : // eslint-disable-next-line quotes
-            "This subgroup keeps echo's websites up and running."}
+          "This subgroup keeps echo's websites up and running."}
       </Text>
       <SimpleGrid columns={1} spacingY='6px' m={4}>
         <LinkButton
