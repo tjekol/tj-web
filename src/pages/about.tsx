@@ -4,20 +4,8 @@ import {
   textColorLightMode,
   textColorDarkMode,
 } from '@/components/color-themes';
-<<<<<<< HEAD
 import { SimpleGrid, Flex, useColorModeValue, Text } from '@chakra-ui/react';
 import LinkButton from '@/components/link-button';
-=======
-import {
-  Box,
-  SimpleGrid,
-  Flex,
-  useColorModeValue,
-  LinkOverlay,
-  LinkBox,
-  Text,
-} from '@chakra-ui/react';
->>>>>>> c5e4880 (language switcher works for the whole site)
 import useLanguage from '@/hooks/use-language';
 import PageComponent from '@/components/page';
 
