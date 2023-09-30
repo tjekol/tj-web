@@ -46,7 +46,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,scss,json,md}": [
-      "npm run prettier --"
+      "yarn lint src  --fix",
+      "yarn prettier src --check"
     ]
   }
 }
