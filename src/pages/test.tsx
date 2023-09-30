@@ -8,7 +8,7 @@ import {
 import { HiOutlineArrowSmLeft } from 'react-icons/hi';
 import PageComponent from '@/components/page';
 
-const TestPage = () => {
+function TestPage() {
   return (
     <PageComponent header={'Tester'} desc={'This is a testing page'}>
       <Flex>
@@ -25,6 +25,6 @@ const TestPage = () => {
       </Flex>
     </PageComponent>
   );
-};
+}
 
 export default TestPage;
