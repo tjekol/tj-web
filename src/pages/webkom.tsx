@@ -4,7 +4,7 @@ import {
   formBackgroundDark,
   textColorLight,
   textColorDark,
-} from '@/components/theme';
+} from '@/components/color-themes';
 import {
   Box,
   LinkBox,
