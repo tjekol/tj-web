@@ -5,8 +5,8 @@ export const textColorDark = '#D3CDF9';
 export const formBackgroundLight = '#D3CDF9';
 export const formBackgroundDark = '#6B60B1';
 
-import { IoSunny, IoMoon } from 'react-icons/io5';
 import { Box, useColorMode } from '@chakra-ui/react';
+import { IoSunny, IoMoon } from 'react-icons/io5';
 import { useState } from 'react';
 
 function DarkModeSwitch() {
@@ -15,11 +15,11 @@ function DarkModeSwitch() {
 
   return (
     <Box
-      position="absolute"
-      top="4"
-      right="4"
-      cursor="pointer"
-      transition=".15s ease-out"
+      position='absolute'
+      top='4'
+      right='4'
+      cursor='pointer'
+      transition='.15s ease-out'
       _hover={{ transform: 'scale(1.30)' }}
       onClick={() => {
         toggleColorMode();
