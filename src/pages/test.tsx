@@ -13,10 +13,10 @@ const TestPage = () => {
     <PageComponent header={'Tester'} desc={'This is a testing page'}>
       <Flex>
         <LinkBox>
-          <LinkOverlay href="/">
+          <LinkOverlay href='/'>
             <IconButton
-              width="15"
-              aria-label="previous page"
+              width='15'
+              aria-label='previous page'
               icon={<HiOutlineArrowSmLeft />}
             />
           </LinkOverlay>

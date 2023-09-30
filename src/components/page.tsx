@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Flex,
   Heading,
@@ -9,17 +8,18 @@ import {
   LinkOverlay,
   Spacer,
 } from '@chakra-ui/react';
-import {
-  HiOutlineArrowSmLeft,
-  HiOutlineArrowSmRight,
-  HiOutlineHome,
-} from 'react-icons/hi';
 import DarkModeSwitch, {
   formBackgroundLight,
   formBackgroundDark,
   textColorLight,
   textColorDark,
 } from './color-themes';
+import {
+  HiOutlineArrowSmLeft,
+  HiOutlineArrowSmRight,
+  HiOutlineHome,
+} from 'react-icons/hi';
+import React from 'react';
 
 function PageComponent({
   header,
@@ -45,26 +45,27 @@ function PageComponent({
   return (
     <>
       <Flex
-        height="100vh"
-        alignItems="center"
-        justifyContent="center"
+        height='100vh'
+        alignItems='center'
+        justifyContent='center'
         background={'#272727'}
       >
         <Flex
-          direction="column"
+          direction='column'
           background={formBackground}
-          p="12"
-          rounded="6"
-          position="relative"
-          minW="300"
-          maxW="350"
+          p='12'
+          rounded='6'
+          position='relative'
+          minW='300'
+          maxW='350'
+          minH='400'
         >
-          <Heading size="md" mb="2" textAlign="center" color={textColor}>
+          <Heading size='md' mb='2' textAlign='center' color={textColor}>
             {header}
           </Heading>
           {desc && (
             <Flex>
-              <Text m="6" textAlign="center" color={textColor}>
+              <Text m='6' textAlign='center' color={textColor}>
                 {desc}
               </Text>
             </Flex>
@@ -76,8 +77,8 @@ function PageComponent({
                 <LinkBox>
                   <LinkOverlay href={prevPage}>
                     <IconButton
-                      width="15"
-                      aria-label="previous page"
+                      width='15'
+                      aria-label='previous page'
                       icon={<HiOutlineArrowSmLeft />}
                     />
                   </LinkOverlay>
@@ -86,11 +87,11 @@ function PageComponent({
               {homeButton && (
                 <>
                   <Spacer />
-                  <LinkBox mr="10">
-                    <LinkOverlay href="/">
+                  <LinkBox mr='10'>
+                    <LinkOverlay href='/'>
                       <IconButton
-                        width="15"
-                        aria-label="next page"
+                        width='15'
+                        aria-label='next page'
                         icon={<HiOutlineHome />}
                       />
                     </LinkOverlay>
@@ -102,8 +103,8 @@ function PageComponent({
                 <LinkBox>
                   <LinkOverlay href={nextPage}>
                     <IconButton
-                      width="15"
-                      aria-label="next page"
+                      width='15'
+                      aria-label='next page'
                       icon={<HiOutlineArrowSmRight />}
                     />
                   </LinkOverlay>
@@ -115,12 +116,12 @@ function PageComponent({
         </Flex>
       </Flex>
       <LinkBox>
-        <LinkOverlay href="https://github.com/tjekol/tj-web">
+        <LinkOverlay href='https://github.com/tjekol/tj-web'>
           <Text
-            pos="relative"
-            bottom="10"
-            textAlign="center"
-            color="grey"
+            pos='relative'
+            bottom='10'
+            textAlign='center'
+            color='grey'
             _hover={{ textDecoration: 'underline' }}
           >
             Made by Thea Jenny Kolnes🦋
