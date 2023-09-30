@@ -13,7 +13,7 @@ import {
   LinkBox,
   Text,
 } from '@chakra-ui/react';
-import { useLanguage } from '@/components/language-context';
+import useLanguage from '@/hooks/use-language';
 import PageComponent from '@/components/page';
 
 const AboutPage = () => {
@@ -22,7 +22,7 @@ const AboutPage = () => {
     backgroundDarkMode,
   );
   const textColor = useColorModeValue(textColorLightMode, textColorDarkMode);
-  const isNorwegian = useLanguage().language === 'no';
+  const isNorwegian = useLanguage();
 
   return (
     <PageComponent
@@ -36,7 +36,7 @@ const AboutPage = () => {
     >
       <Flex>
         <Text mt='4' textAlign='center' color={textColor}>
-          <b>Projects</b>
+          <b>{isNorwegian ? 'Prosjekter' : 'Projects'}</b>
         </Text>
       </Flex>
       <SimpleGrid columns={1} spacingX='20px' spacingY='6px' m={4}>

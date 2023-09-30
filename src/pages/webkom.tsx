@@ -12,7 +12,7 @@ import {
   Text,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { useLanguage } from '@/components/language-context';
+import useLanguage from '@/hooks/use-language';
 import PageComponent from '@/components/page';
 
 const WebkomPage = () => {
@@ -21,7 +21,7 @@ const WebkomPage = () => {
     backgroundDarkMode,
   );
   const textColor = useColorModeValue(textColorLightMode, textColorDarkMode);
-  const isNorwegian = useLanguage().language === 'no';
+  const isNorwegian = useLanguage();
 
   return (
     <PageComponent header='Webkom💻' prevPage='/about' homeButton={true}>
@@ -30,7 +30,12 @@ const WebkomPage = () => {
           ? 'Webkom er en undergruppe under linjeforeningen echo, som er linjeforeningen til Institutt for Informatikk på UIB.'
           : 'Webkom is a subgroup under the student organization echo, which is the student organization to the Informatics Department at UIB.'}
       </Text>
-      <Text>This subgroup keeps their websites up and running.</Text>
+      {/* eslint-disable-next-line jsx-quotes, quotes*/}
+      <Text>
+        {isNorwegian
+          ? 'Denne undergruppa drifter nettsidene til echo.'
+          : "This subgroup keeps echo's websites up and running."}
+      </Text>
       <SimpleGrid
         columns={1}
         spacingY='6px'
