@@ -26,7 +26,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'unused-imports'],
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
@@ -35,5 +35,6 @@ module.exports = {
     'react/jsx-uses-vars': ['error'],
     'react-hooks/exhaustive-deps': ['warn'],
     'react/react-in-jsx-scope': 'off',
+    'unused-imports/no-unused-imports': 'error',
   },
 };
