@@ -1,8 +1,8 @@
 import {
-  formBackgroundLight,
-  formBackgroundDark,
-  textColorLight,
-  textColorDark,
+  backgroundLightMode,
+  backgroundDarkMode,
+  textColorLightMode,
+  textColorDarkMode,
 } from '@/components/color-themes';
 import {
   Box,
@@ -13,18 +13,25 @@ import {
   LinkBox,
   Text,
 } from '@chakra-ui/react';
+import { useLanguage } from '@/components/language-context';
 import PageComponent from '@/components/page';
 
 const AboutPage = () => {
   const formBackground = useColorModeValue(
-    formBackgroundLight,
-    formBackgroundDark,
+    backgroundLightMode,
+    backgroundDarkMode,
   );
-  const textColor = useColorModeValue(textColorLight, textColorDark);
+  const textColor = useColorModeValue(textColorLightMode, textColorDarkMode);
+  const isNorwegian = useLanguage().language === 'no';
+
   return (
     <PageComponent
-      header={'About me✍🏽'}
-      desc={'I take a big interest in video editing📹, coding👩🏽‍💻 and art🎨.'}
+      header={isNorwegian ? 'Om meg✍🏽' : 'About me✍🏽'}
+      desc={
+        isNorwegian
+          ? 'Jeg har stor interesse for videredigering📹, koding👩🏽‍💻 and kunst🎨.'
+          : 'I take a big interest in video editing📹, coding👩🏽‍💻 and art🎨.'
+      }
       prevPage={'/'}
     >
       <Flex>
@@ -42,7 +49,7 @@ const AboutPage = () => {
             </Box>
           </LinkOverlay>
         </LinkBox>
-        <LinkBox transition='.1s ease-out' _hover={{ transform: 'scale(1.1)' }}>
+        {/* <LinkBox transition='.1s ease-out' _hover={{ transform: 'scale(1.1)' }}>
           <LinkOverlay href='/test'>
             <Box rounded={5} bg={textColor}>
               <Text
@@ -55,7 +62,7 @@ const AboutPage = () => {
               </Text>
             </Box>
           </LinkOverlay>
-        </LinkBox>
+        </LinkBox> */}
       </SimpleGrid>
     </PageComponent>
   );

@@ -1,8 +1,8 @@
 import {
-  formBackgroundLight,
-  formBackgroundDark,
-  textColorLight,
-  textColorDark,
+  backgroundLightMode,
+  backgroundDarkMode,
+  textColorLightMode,
+  textColorDarkMode,
 } from '@/components/color-themes';
 import {
   Box,
@@ -12,19 +12,23 @@ import {
   Text,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { useLanguage } from '@/components/language-context';
 import PageComponent from '@/components/page';
 
 const WebkomPage = () => {
   const formBackground = useColorModeValue(
-    formBackgroundLight,
-    formBackgroundDark,
+    backgroundLightMode,
+    backgroundDarkMode,
   );
-  const textColor = useColorModeValue(textColorLight, textColorDark);
+  const textColor = useColorModeValue(textColorLightMode, textColorDarkMode);
+  const isNorwegian = useLanguage().language === 'no';
+
   return (
     <PageComponent header='Webkom💻' prevPage='/about' homeButton={true}>
       <Text mb='5'>
-        Webkom is a subgroup under the student organization (echo) under the
-        Informatics Department at UIB.
+        {isNorwegian
+          ? 'Webkom er en undergruppe under linjeforeningen echo, som er linjeforeningen til Institutt for Informatikk på UIB.'
+          : 'Webkom is a subgroup under the student organization echo, which is the student organization to the Informatics Department at UIB.'}
       </Text>
       <Text>This subgroup keeps their websites up and running.</Text>
       <SimpleGrid

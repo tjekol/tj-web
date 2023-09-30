@@ -1,9 +1,14 @@
 // theme.tsx
-export const textColorLight = '#404067';
-export const textColorDark = '#D3CDF9';
+// normal text
+export const textColorLightMode = '#404067';
+export const textColorDarkMode = '#E2DDFF';
 
-export const formBackgroundLight = '#D3CDF9';
-export const formBackgroundDark = '#6B60B1';
+// less visible text
+export const textColorLightModeLV = '#6B60B1';
+export const textColorDarkModeLV = '#D3CDF9';
+
+export const backgroundLightMode = '#D3CDF9';
+export const backgroundDarkMode = '#6B60B1';
 
 import { Box, useColorMode } from '@chakra-ui/react';
 import { IoSunny, IoMoon } from 'react-icons/io5';

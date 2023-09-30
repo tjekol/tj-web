@@ -1,5 +1,4 @@
 import {
-  IconButton,
   Icon,
   Flex,
   Spacer,
@@ -7,78 +6,72 @@ import {
   LinkOverlay,
   LinkBox,
 } from '@chakra-ui/react';
-import { HiOutlineArrowSmRight } from 'react-icons/hi';
+import LanguageSwitcher from '@/components/language-switcher';
+import { useLanguage } from '@/components/language-context';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
 import PageComponent from '@/components/page';
+import { MdEmail } from 'react-icons/md';
+import React from 'react';
 
 const IndexPage = () => {
   const textColor = useColorModeValue('#404067', '#D3CDF9');
+  const isNorwegian = useLanguage().language === 'no';
 
   return (
     <PageComponent
-      header={'✨HI THERE✨'}
+      header={isNorwegian ? '✨HEI DU✨' : '✨HI THERE✨'}
       desc={
-        'My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.'
+        isNorwegian
+          ? ' Mitt navn er Thea Jenny Kolnes. Jeg tar bachelor i Datateknologi💻 in Bergen at UIB.'
+          : 'My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.'
       }
+      nextPage='/about'
     >
-      <Flex m="2" direction="row">
+      <Flex mt='2' direction='row'>
         <Spacer />
         <LinkBox
-          transition=".1s ease-out"
+          transition='.1s ease-out'
           _hover={{ transform: 'scale(1.30)' }}
         >
           <LinkOverlay
-            href="https://www.linkedin.com/in/thea-jenny-kolnes-a79821231/"
-            aria-label="Linkedin-en min"
+            href='https://www.linkedin.com/in/thea-jenny-kolnes-a79821231/'
+            aria-label='Linkedin-en min'
             isExternal
           >
-            <Icon as={FaLinkedin} boxSize="7" color={textColor} />
+            <Icon as={FaLinkedin} boxSize='7' color={textColor} />
           </LinkOverlay>
         </LinkBox>
 
         <LinkBox
-          mr="5"
-          ml="5"
-          transition=".1s ease-out"
+          mr='5'
+          ml='5'
+          transition='.1s ease-out'
           _hover={{ transform: 'scale(1.30)' }}
         >
           <LinkOverlay
-            href="https://github.com/tkol02"
-            aria-label="Githubben min"
+            href='https://github.com/tkol02'
+            aria-label='Githubben min'
             isExternal
           >
-            <Icon as={FaGithub} boxSize="7" color={textColor} />
+            <Icon as={FaGithub} boxSize='7' color={textColor} />
           </LinkOverlay>
         </LinkBox>
 
         <LinkBox
-          transition=".1s ease-out"
+          transition='.1s ease-out'
           _hover={{ transform: 'scale(1.30)' }}
         >
           <LinkOverlay
-            href="mailto:thea.jenny02@gmail.com"
-            aria-label="Send mail til meg"
+            href='mailto:thea.jenny02@gmail.com'
+            aria-label='Send mail til meg'
             isExternal
           >
-            <Icon as={MdEmail} boxSize="7" color={textColor} />
+            <Icon as={MdEmail} boxSize='7' color={textColor} />
           </LinkOverlay>
         </LinkBox>
-
         <Spacer />
       </Flex>
-
-      <Flex justifyContent="right">
-        <LinkBox>
-          <LinkOverlay href="/about">
-            <IconButton
-              width="15"
-              aria-label="next page"
-              icon={<HiOutlineArrowSmRight />}
-            />
-          </LinkOverlay>
-        </LinkBox>
-      </Flex>
+      <LanguageSwitcher />
     </PageComponent>
   );
 };
