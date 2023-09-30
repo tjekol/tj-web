@@ -1,11 +1,14 @@
 // pages/_app.js
+import { LanguageProvider } from '@/components/language-context';
 import { ChakraProvider } from '@chakra-ui/react';
 import { AppProps } from 'next/app'; // Import the AppProps type
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <LanguageProvider>
+        <Component {...pageProps} />
+      </LanguageProvider>
     </ChakraProvider>
   );
 }

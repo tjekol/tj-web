@@ -1,3 +1,9 @@
+import DarkModeSwitch, {
+  backgroundLightMode,
+  backgroundDarkMode,
+  textColorLightMode,
+  textColorDarkMode,
+} from './color-themes';
 import {
   Flex,
   Heading,
@@ -8,12 +14,6 @@ import {
   LinkOverlay,
   Spacer,
 } from '@chakra-ui/react';
-import DarkModeSwitch, {
-  formBackgroundLight,
-  formBackgroundDark,
-  textColorLight,
-  textColorDark,
-} from './color-themes';
 import {
   HiOutlineArrowSmLeft,
   HiOutlineArrowSmRight,
@@ -37,10 +37,10 @@ function PageComponent({
   homeButton?: boolean;
 }) {
   const formBackground = useColorModeValue(
-    formBackgroundLight,
-    formBackgroundDark,
+    backgroundLightMode,
+    backgroundDarkMode,
   );
-  const textColor = useColorModeValue(textColorLight, textColorDark);
+  const textColor = useColorModeValue(textColorLightMode, textColorDarkMode);
 
   return (
     <>
@@ -51,14 +51,15 @@ function PageComponent({
         background={'#272727'}
       >
         <Flex
+          position='relative'
+          paddingY='8'
+          paddingX='6'
           direction='column'
           background={formBackground}
-          p='12'
           rounded='6'
-          position='relative'
           minW='300'
-          maxW='350'
-          minH='400'
+          maxW='320'
+          minH='300'
         >
           <Heading size='md' mb='2' textAlign='center' color={textColor}>
             {header}
