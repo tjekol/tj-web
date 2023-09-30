@@ -13,7 +13,7 @@ import PageComponent from '@/components/page';
 import { MdEmail } from 'react-icons/md';
 import React from 'react';
 
-const IndexPage = () => {
+function IndexPage() {
   const textColor = useColorModeValue('#404067', '#D3CDF9');
   const isNorwegian = useLanguage();
 
@@ -74,6 +74,6 @@ const IndexPage = () => {
       <LanguageSwitcher />
     </PageComponent>
   );
-};
+}
 
 export default IndexPage;
