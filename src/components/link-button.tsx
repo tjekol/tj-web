@@ -10,7 +10,7 @@ function LinkButton({
   fontStyle,
 }: {
   title: string;
-  link: string;
+  link?: string;
   boxColor: string;
   underlineHover?: boolean;
   scaleHover?: boolean;

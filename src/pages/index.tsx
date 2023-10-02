@@ -1,10 +1,10 @@
-import { Flex, Spacer, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Image, Spacer, useColorModeValue } from '@chakra-ui/react';
 import LanguageSwitcher from '@/components/language-switcher';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import useLanguage from '@/hooks/use-language';
 import LinkIcon from '@/components/link-icon';
 import PageComponent from '@/components/page';
-import { Image } from '@chakra-ui/image';
+import thea from '@/assets/cv-bilde.jpeg';
 import { MdEmail } from 'react-icons/md';
 import React from 'react';
 
@@ -23,7 +23,7 @@ function IndexPage() {
       nextPage='/about'
     >
       <Image
-        src={'src/assets/meg.png'}
+        src={thea.src}
         alignSelf='center'
         borderRadius='full'
         boxSize='150px'

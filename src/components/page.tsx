@@ -57,7 +57,7 @@ function PageComponent({
           direction='column'
           background={formBackground}
           rounded='6'
-          minW='300'
+          minW='350'
           maxW='320'
           minH='300'
         >
