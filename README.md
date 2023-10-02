@@ -1,1 +1,1 @@
-Liten nettside om meg :)
+My personal website🦋
