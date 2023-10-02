@@ -40,13 +40,13 @@ function AboutPage() {
           scaleHover={true}
           hoverColor={formBackground}
         />
-        {/* <LinkButton 
-          title='test'
-          link={'/test'} 
-          boxColor={textColor} 
-          scaleHover={true}
+        <LinkButton
+          title={isNorwegian ? 'kommer snart…' : 'coming soon…'}
+          // link={'/test'}
+          boxColor={textColor}
+          scaleHover={false}
           hoverColor={formBackground}
-        /> */}
+        />
       </SimpleGrid>
     </PageComponent>
   );
