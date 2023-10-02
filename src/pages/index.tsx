@@ -17,7 +17,7 @@ function IndexPage() {
       header={isNorwegian ? '✨HEI DU✨' : '✨HI THERE✨'}
       desc={
         isNorwegian
-          ? ' Mitt navn er Thea Jenny Kolnes. Jeg tar bachelor i Datateknologi💻 in Bergen at UIB.'
+          ? ' Mitt navn er Thea Jenny Kolnes. Jeg tar bachelor i Datateknologi💻 i Bergen på UIB.'
           : 'My name is Thea Jenny Kolnes. I am currently studying Computer Technology💻 in Bergen at UIB.'
       }
       nextPage='/about'
