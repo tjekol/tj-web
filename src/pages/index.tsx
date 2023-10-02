@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import useLanguage from '@/hooks/use-language';
 import LinkIcon from '@/components/link-icon';
 import PageComponent from '@/components/page';
+import { Image } from '@chakra-ui/image';
 import { MdEmail } from 'react-icons/md';
 import React from 'react';
 
@@ -21,6 +22,14 @@ function IndexPage() {
       }
       nextPage='/about'
     >
+      <Image
+        src={'src/assets/meg.png'}
+        alignSelf='center'
+        borderRadius='full'
+        boxSize='150px'
+        fallbackSrc='https://via.placeholder.com/150'
+        alt='Bilde av meg'
+      />
       <Flex mt='2' direction='row'>
         <Spacer />
         <LinkIcon
