@@ -26,7 +26,7 @@ function LinkButton({
         color: hoverColor,
       }}
     >
-      <LinkOverlay href={link}>
+      <LinkOverlay href={link} isExternal>
         <Box rounded={5} bg={boxColor}>
           <Text
             align='center'

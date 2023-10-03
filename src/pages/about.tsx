@@ -22,7 +22,7 @@ function AboutPage() {
       header={isNorwegian ? 'Om meg✍🏽' : 'About me✍🏽'}
       desc={
         isNorwegian
-          ? 'Jeg har stor interesse for videredigering📹, koding👩🏽‍💻 and kunst🎨.'
+          ? 'Jeg har stor interesse for videoredigering📹, koding👩🏽‍💻 and kunst🎨.'
           : 'I take a big interest in video editing📹, coding👩🏽‍💻 and art🎨.'
       }
       prevPage={'/'}
