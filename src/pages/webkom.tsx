@@ -38,6 +38,7 @@ function WebkomPage() {
           boxColor={textColor}
           underlineHover={true}
           hoverColor={formBackground}
+          isExternalLink={true}
           fontStyle='italic'
         />
         <LinkButton
@@ -46,6 +47,7 @@ function WebkomPage() {
           boxColor={textColor}
           underlineHover={true}
           hoverColor={formBackground}
+          isExternalLink={true}
           fontStyle='italic'
         />
       </SimpleGrid>

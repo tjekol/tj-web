@@ -5,16 +5,18 @@ function LinkButton({
   link,
   boxColor,
   underlineHover,
-  scaleHover,
   hoverColor,
+  isExternalLink,
+  scaleHover,
   fontStyle,
 }: {
   title: string;
   link?: string;
   boxColor: string;
   underlineHover?: boolean;
-  scaleHover?: boolean;
   hoverColor: string;
+  isExternalLink: boolean;
+  scaleHover?: boolean;
   fontStyle?: string;
 }) {
   return (
@@ -26,7 +28,7 @@ function LinkButton({
         color: hoverColor,
       }}
     >
-      <LinkOverlay href={link} isExternal>
+      <LinkOverlay href={link} isExternal={isExternalLink}>
         <Box rounded={5} bg={boxColor}>
           <Text
             align='center'

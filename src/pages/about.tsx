@@ -37,15 +37,17 @@ function AboutPage() {
           title='Webkom💻'
           link={'/webkom'}
           boxColor={textColor}
-          scaleHover={true}
           hoverColor={formBackground}
+          isExternalLink={false}
+          scaleHover={true}
         />
         <LinkButton
           title={isNorwegian ? 'kommer snart…' : 'coming soon…'}
           // link={'/test'}
           boxColor={textColor}
-          scaleHover={false}
           hoverColor={formBackground}
+          isExternalLink={false}
+          scaleHover={false}
         />
       </SimpleGrid>
     </PageComponent>

@@ -1,4 +1,10 @@
-import { Flex, Image, Spacer, useColorModeValue, Box } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Spacer,
+  useColorModeValue,
+  SlideFade,
+} from '@chakra-ui/react';
 import LanguageSwitcher from '@/components/language-switcher';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import useLanguage from '@/hooks/use-language';
@@ -6,18 +12,11 @@ import LinkIcon from '@/components/link-icon';
 import PageComponent from '@/components/page';
 import thea from '@/assets/cv-bilde.jpeg';
 import { MdEmail } from 'react-icons/md';
-import { motion } from 'framer-motion';
 import React from 'react';
 
 function IndexPage() {
   const textColor = useColorModeValue('#404067', '#D3CDF9');
   const isNorwegian = useLanguage();
-  const MotionBox = motion(Box);
-
-  const pageTransition = {
-    initial: { y: -10 },
-    animate: { y: 0 },
-  };
 
   return (
     <Flex
@@ -26,12 +25,7 @@ function IndexPage() {
       justifyContent='center'
       background={'#272727'}
     >
-      <MotionBox
-        variants={pageTransition}
-        initial='initial'
-        animate='animate'
-        exit='initial'
-      >
+      <SlideFade offsetY={-20} in={true}>
         <PageComponent
           header={isNorwegian ? '✨HEI DU✨' : '✨HI THERE✨'}
           desc={
@@ -73,7 +67,7 @@ function IndexPage() {
           </Flex>
           <LanguageSwitcher />
         </PageComponent>
-      </MotionBox>
+      </SlideFade>
     </Flex>
   );
 }
