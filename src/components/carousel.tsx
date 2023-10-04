@@ -7,9 +7,9 @@ import { Box, IconButton } from '@chakra-ui/react';
 import Slider from 'react-slick';
 import React from 'react';
 
-import blomster from '../assets/blomster.JPG';
-import hester from '../assets/hester.JPG';
-import hjerte from '../assets/hjerte.JPG';
+import blomster from '../assets/blomster.jpeg';
+import hester from '../assets/hester.jpeg';
+import hjerte from '../assets/hjerte.jpeg';
 
 // Settings for the slider
 const settings = {
