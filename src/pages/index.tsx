@@ -5,12 +5,12 @@ import {
   useColorModeValue,
   SlideFade,
 } from '@chakra-ui/react';
-import LanguageSwitcher from '@/components/language-switcher';
+import LanguageSwitcher from '../components/language-switcher';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import useLanguage from '@/hooks/use-language';
-import LinkIcon from '@/components/link-icon';
-import PageComponent from '@/components/page';
-import thea from '@/assets/cv-bilde.jpeg';
+import useLanguage from '../hooks/use-language';
+import LinkIcon from '../components/link-icon';
+import PageComponent from '../components/page';
+import thea from '../assets/cv-bilde.jpeg';
 import { MdEmail } from 'react-icons/md';
 import React from 'react';
 

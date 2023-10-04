@@ -3,11 +3,11 @@ import {
   backgroundDarkMode,
   textColorLightMode,
   textColorDarkMode,
-} from '@/components/color-themes';
+} from '../components/color-themes';
 import { useColorModeValue, Text, SimpleGrid } from '@chakra-ui/react';
-import LinkButton from '@/components/link-button';
-import useLanguage from '@/hooks/use-language';
-import PageComponent from '@/components/page';
+import LinkButton from '../components/link-button';
+import useLanguage from '../hooks/use-language';
+import PageComponent from '../components/page';
 
 function WebkomPage() {
   const formBackground = useColorModeValue(
