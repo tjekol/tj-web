@@ -46,7 +46,7 @@ function PageComponent({
   return (
     <>
       <Flex
-        height='100vh'
+        h='100vh'
         alignItems='center'
         justifyContent='center'
         background={'#272727'}
