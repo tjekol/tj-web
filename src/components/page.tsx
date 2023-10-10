@@ -55,7 +55,7 @@ function PageComponent({
           <Flex
             position='relative'
             paddingY='8'
-            paddingX='6'
+            paddingX='5'
             direction='column'
             background={formBackground}
             rounded='6'

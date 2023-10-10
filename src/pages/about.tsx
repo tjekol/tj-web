@@ -8,7 +8,6 @@ import { SimpleGrid, Flex, useColorModeValue, Text } from '@chakra-ui/react';
 import LinkButton from '../components/link-button';
 import useLanguage from '../hooks/use-language';
 import PageComponent from '../components/page';
-import Carousel from '../components/carousel';
 
 function AboutPage() {
   const formBackground = useColorModeValue(
@@ -28,7 +27,6 @@ function AboutPage() {
       }
       prevPage={'/'}
     >
-      <Carousel />
       <Flex mt='3'>
         <Text mt='2' textAlign='center' color={textColor}>
           <b>{isNorwegian ? 'Prosjekter' : 'Projects'}</b>
@@ -44,12 +42,12 @@ function AboutPage() {
           scaleHover={true}
         />
         <LinkButton
-          title={isNorwegian ? 'kommer snart…' : 'coming soon…'}
-          // link={'/test'}
+          title={'Memories🎞️'}
+          link={'/memories'}
           boxColor={textColor}
           hoverColor={formBackground}
           isExternalLink={false}
-          scaleHover={false}
+          scaleHover={true}
         />
       </SimpleGrid>
     </PageComponent>
